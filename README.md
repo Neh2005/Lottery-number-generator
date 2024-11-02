@@ -50,7 +50,12 @@ In `script.js`, the following main functions are defined:
 
 ### 📸 Screenshot
 
+THe whole webpage
 ![image](https://github.com/user-attachments/assets/6bec361b-4112-4898-a10f-3150b1c1855d)
+
+After generating the winning number
 ![image](https://github.com/user-attachments/assets/fcead6f2-3ce0-499e-b156-9befecd97b0a)
 
+The winning numbers will be displayed in the console as well.
+![image](https://github.com/user-attachments/assets/480b71fa-4ed4-473c-a7e6-84a8e3dfefa2)
 
