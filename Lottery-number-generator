@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lottery ticket </title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+     
+	.submit{
+     margin-bottom:10px;
+   }
+    body {
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b43f994-9aa9-440b-b5ba-215847ef12d0/d2j98ao-ddb75044-e751-4626-bb6a-278568177ae4.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzViNDNmOTk0LTlhYTktNDQwYi1iNWJhLTIxNTg0N2VmMTJkMFwvZDJqOThhby1kZGI3NTA0NC1lNzUxLTQ2MjYtYmI2YS0yNzg1NjgxNzdhZTQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._IHVcufKjqMvKqXqJhvywJvaw9OErdo8MIUDjrVx6FQ');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        text-align: center;
+    }
+   button{
+    padding:10px;
+    width: 300px;
+    background:#04AA6D;
+    border:solid 1px #ddd;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+    outline:none;
+   }
+  button:hover{
+    background:orange;
+    color:#fff;
+  }
+  .close{
+  border: none;
+  width:10px;
+  cursor: pointer;
+   
+}
+
+.topright {
+  position: absolute;
+  right: 0;
+  top: 0
+}
+  #numbers{
+    font-size:18px;
+    color:#555;
+  }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+<h1 class="pl-5">Lottery Number Generator</h1>
+<p>Click the button below to generate your lucky number:</p>
+<div class="submit pl-5 pt-2">
+  <button type="button" onclick="rollNumber();"data-bs-toggle="modal" data-bs-target="#myModal">Generate></button>
+  <!-- Modal -->
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lottery Result</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;
+       </button>
+      </div>
+      <div class="modal-body">
+        <p id="modalContent"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div id="numbers"></div>
+<script>
+	var r;
+function rollNumber(){
+	var set = [];
+	while(set.length < 1){
+	    r = Math.floor(Math.random()*58) + 1;
+		if(set.indexOf(r) === -1) set.push(r);
+	}
+    console.log("The winner is"+" "+r)
+	displayResult(set);
+}
+ 
+ 
+function displayResult(set){ 
+	document.getElementById('numbers').innerHTML="<center><h1 class='text-danger'>"+set+"</h1></center>";
+    document.querySelector('.modal-body').innerHTML = "<p>The winning number is: " + r + "</p>";
+}
+</script>
+</div>
+</body>
+</html>
