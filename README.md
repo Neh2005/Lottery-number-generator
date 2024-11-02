@@ -50,5 +50,7 @@ In `script.js`, the following main functions are defined:
 
 ### 📸 Screenshot
 
-![image](https://github.com/user-attachments/assets/6bec361b-4112-4898-a10f-3150b1c1855d)(#)
+![image](https://github.com/user-attachments/assets/6bec361b-4112-4898-a10f-3150b1c1855d)
+![image](https://github.com/user-attachments/assets/fcead6f2-3ce0-499e-b156-9befecd97b0a)
+
 
